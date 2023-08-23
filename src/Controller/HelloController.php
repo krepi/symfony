@@ -15,7 +15,7 @@ class HelloController extends AbstractController
     {
         return $this->render('hello/index.html.twig',
             [
-                'message' => implode(',', array_slice($this->message, 0, $limit))
+                'messages' =>  array_slice($this->message, 0, $limit)
             ]
         );
 

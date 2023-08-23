@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'base.html.twig' %}
 
-</head>
-<body>
-<h1>{{ message }}</h1>
-</body>
-</html>
+
+{% block body %}
+    {% if(messages|length > 0) %}
+        {% for message in messages %}
+            <h1>{{ message }}</h1>
+        {% endfor %}
+    {% else %}
+        <p>There is nothing here yet!</p>
+    {% endif %}
+{% endblock %}
+
