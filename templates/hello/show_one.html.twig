@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>  {{ message }} z twiga nigga</h1>
+<h1>  {{ message.message }} z twiga nigga</h1>
 <div>
     <b>
-        {{ message }}
+        {{ message.message }}
     </b>
+    {{ include('hello/_message.html.twig', {message:message}) }}
 </div>
 {% endblock  %}
