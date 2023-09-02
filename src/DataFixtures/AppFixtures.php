@@ -26,6 +26,11 @@ class AppFixtures extends Fixture
         $microPost3->setText('Welcome to US');
         $microPost3->setCreated(new DateTime());
         $manager->persist($microPost3);
+        $microPost4 = new MicroPost();
+        $microPost4->setTitle('Welcome to USB');
+        $microPost4->setText('Welcome to USB');
+        $microPost4->setCreated(new DateTime());
+        $manager->persist($microPost4);
 
         $manager->flush();
     }
